@@ -92,6 +92,10 @@ module Jekyll
         "#{array[0...-1].join(', ')}, #{connector} #{array[-1]}"
       end
     end
-
+    
+    def string_to_css_class_name(str)
+      return str.gsub(/[^_a-zA-Z0-9-]/, '-')
+    end
+    
   end
 end
